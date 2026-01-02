@@ -1,0 +1,7 @@
+```yaml
+# Sanguine — социальный, адаптивный, экспрессивный
+# Внимание: Wide (NoemaFast) → Stable (NoemaSlow)
+
+attention_bias: 0.35            # распределённое внимание, низкая глубина
+inversion_preference: "Melancholic"  # при напряжении → рефлексия
+```

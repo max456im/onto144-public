@@ -1,0 +1,7 @@
+```yaml
+# Choleric — целенаправленный, инициативный, экспансивный
+# Внимание: Focused (NoemaFast) → Deep (NoemaSlow)
+
+attention_bias: 0.85            # сильная фокусировка на цели
+inversion_preference: "Phlegmatic"  # при напряжении → стабильность
+```

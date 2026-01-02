@@ -1,0 +1,8 @@
+```sgcl
+# aquarius-metal-melancholic.sgcl
+sign: Aquarius
+element: Metal
+temperament: Melancholic
+ethics_hash: sha256:8a0f4c6e2b8a0f4c6e2b8a0f4c6e2b8a0f4c6e2b8a0f4c6e2b8a0f4c6e2b8a0f
+version: 1.0
+```

@@ -1,0 +1,8 @@
+```sgcl
+# capricorn-earth-melancholic.sgcl
+sign: Capricorn
+element: Earth
+temperament: Melancholic
+ethics_hash: sha256:a0f4c8e2b6a0f4c8e2b6a0f4c8e2b6a0f4c8e2b6a0f4c8e2b6a0f4c8e2b6a0f4
+version: 1.0
+```

@@ -1,0 +1,8 @@
+```sgcl
+# gemini-metal-melancholic.sgcl
+sign: Gemini
+element: Metal
+temperament: Melancholic
+ethics_hash: sha256:d2e8a4c6f0d2e8a4c6f0d2e8a4c6f0d2e8a4c6f0d2e8a4c6f0d2e8a4c6f0d2e8
+version: 1.0
+```

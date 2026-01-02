@@ -1,0 +1,8 @@
+```sgcl
+# cancer-water-melancholic.sgcl
+sign: Cancer
+element: Water
+temperament: Melancholic
+ethics_hash: sha256:7c9e3b4f1a7c9e3b4f1a7c9e3b4f1a7c9e3b4f1a7c9e3b4f1a7c9e3b4f1a7c9e
+version: 1.0
+```

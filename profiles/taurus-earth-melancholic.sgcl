@@ -1,0 +1,8 @@
+```sgcl
+# taurus-earth-melancholic.sgcl
+sign: Taurus
+element: Earth
+temperament: Melancholic
+ethics_hash: sha256:c4f2a0d8e6c4f2a0d8e6c4f2a0d8e6c4f2a0d8e6c4f2a0d8e6c4f2a0d8e6c4f2
+version: 1.0
+```

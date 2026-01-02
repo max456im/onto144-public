@@ -1,0 +1,10 @@
+```yaml
+# Fire — экспансия, лидерство, выражение
+# Знаки: Aries, Leo, Sagittarius
+
+energy_decay_rate: 0.025        # высокий расход (энергичность)
+social_affinity:
+  - Earth                       # Fire → Earth (порождает)
+social_control:
+  - Metal                       # Fire ⊣ Metal
+```

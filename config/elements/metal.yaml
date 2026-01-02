@@ -1,0 +1,10 @@
+```yaml
+# Metal — структура, точность, сжатие
+# Знаки: Gemini, Libra, Aquarius
+
+energy_decay_rate: 0.015        # умеренный расход
+social_affinity:
+  - Water                       # Metal → Water
+social_control:
+  - Wood                        # Metal ⊣ Wood
+```
