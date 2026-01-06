@@ -1,0 +1,35 @@
+# === ФАКТЫ (онто8-уровень: ретроспективная фиксация) ===
+fact.asserted
+fact.recorded
+fact.verified
+fact.revoked
+fact.obsolete
+
+# === МОДАЛЬНОСТИ (онто16-уровень: перспективная проекция) ===
+modality.possible
+modality.necessary
+modality.permitted
+modality.prohibited
+modality.contingent
+modality.deferred
+modality.contested
+
+# === ИНТЕРФЕЙСНЫЕ ПЕРЕХОДЫ (только явные связки) ===
+fact.asserted → modality.possible
+fact.asserted → modality.permitted
+fact.verified → modality.necessary
+fact.verified → modality.prohibited   # если факт = нарушение инварианта
+fact.revoked  → modality.prohibited
+fact.obsolete → modality.contingent
+
+# === ЗАПРЕЩЁННЫЕ ПЕРЕХОДЫ (нарушают онтологическую целостность) ===
+# fact → modality без явного правила
+# modality → fact (модальность не порождает факт)
+# fact.recorded → modality.necessary   # запись ≠ обязанность
+# modality.possible → fact.asserted    # возможность ≠ реальность
+
+# === СИНТЕТИЧЕСКИЕ ПРИНЦИПЫ ===
+# 1. Факт всегда первичен по отношению к модальности.
+# 2. Модальность может блокировать интерпретацию факта, но не его существование.
+# 3. Если факт противоречит инварианту — он переводится в modality.prohibited и fact.revoked.
+# 4. "Contested" — временный статус при конфликте между онто8 и онто16.

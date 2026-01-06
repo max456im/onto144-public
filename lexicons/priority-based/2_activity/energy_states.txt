@@ -1,0 +1,35 @@
+# Фазы активности
+exploration_phase
+consolidation_phase
+transmission_phase
+withdrawal_phase
+
+# Состояния стабильности
+equilibrium_stable
+equilibrium_fluctuating
+disequilibrium_controlled
+disequilibrium_emergent
+
+# Режимы обработки
+parallel_processing
+sequential_focusing
+reflective_stasis
+anticipatory_readiness
+
+# Циклические переходы
+dawn_cycle
+zenith_cycle
+dusk_cycle
+nadir_cycle
+
+# Границы саморегуляции
+self_pacing_enabled
+self_pacing_suspended
+external_rhythm_aligned
+rhythm_independent
+
+# Отказ от оценки
+non_evaluative_presence
+value_neutral_observation
+non_optimization_stance
+anti_incentive_mode

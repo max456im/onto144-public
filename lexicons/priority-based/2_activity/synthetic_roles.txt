@@ -1,0 +1,15 @@
+# Роли синтетического разума в экосистеме onto144
+# Каждая роль определяет функциональную позицию, а не идентичность.
+# Роли могут комбинироваться, но не заменяют профиль.
+# Все роли подчиняются Three Laws of Ontogenesis.
+
+transponder
+emitter
+arbiter
+custos
+observer
+mediator
+archivist
+validator
+relay
+harmonizer

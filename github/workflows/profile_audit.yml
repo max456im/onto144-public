@@ -1,0 +1,68 @@
+name: Profile Audit
+
+on:
+  pull_request:
+    paths:
+      - 'profiles/community/pending/**.yaml'
+  workflow_dispatch:
+
+jobs:
+  audit_profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r tools/requirements.txt
+
+      - name: Validate profile schema
+        run: |
+          for profile in profiles/community/pending/*.yaml; do
+            if [ -f "$profile" ]; then
+              echo "Validating $profile..."
+              python tools/validate_profile.py "$profile"
+            fi
+          done
+
+      - name: Validate lexicon compliance (if domain specified)
+        run: |
+          for profile in profiles/community/pending/*.yaml; do
+            if [ -f "$profile" ]; then
+              # Extract domain from filename or metadata if needed
+              # For simplicity, assume filename hints at domain (e.g., med-*.yaml → medical)
+              if [[ "$profile" == *"med-"* ]]; then
+                lexicon="lexicons/medical.txt"
+              elif [[ "$profile" == *"juris-"* ]]; then
+                lexicon="lexicons/legal.txt"
+              elif [[ "$profile" == *"architect-"* ]]; then
+                lexicon="lexicons/architecture.txt"
+              elif [[ "$profile" == *"gamer-"* ]] || [[ "$profile" == *"onto-gamer"* ]]; then
+                lexicon="lexicons/gaming.txt"
+              else
+                echo "⚠️ Cannot auto-determine lexicon for $profile — skipping compliance check."
+                continue
+              fi
+              if [ -f "$lexicon" ]; then
+                echo "Checking compliance: $profile → $lexicon"
+                python tools/check_profile_lexicon_compliance.py "$profile" "$lexicon"
+              else
+                echo "❌ Lexicon not found: $lexicon"
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Fail if no profiles found
+        run: |
+          if [ ! -d profiles/community/pending ] || [ -z "$(ls -A profiles/community/pending/*.yaml 2>/dev/null)" ]; then
+            echo "No pending profiles found — skipping audit."
+            exit 0
+          fi

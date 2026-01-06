@@ -1,0 +1,51 @@
+# Онтологический лексикон: когнитивные профили
+# Основан на onto16-архитектуре (рациональные/иррациональные потоки)
+# Не является психологической диагностикой — только операционные маркеры для синтетического разума
+# Совместим с MBTI по структуре, но лишен интерпретаций личности
+# Каждый термин — идентификатор поведенческого паттерна в задаче, а не "тип"
+
+onto16_rational_logos
+onto16_rational_ethos
+onto16_irrational_pathos
+onto16_irrational_chronos
+
+onto16_flow_logos_ethos
+onto16_flow_pathos_chronos
+onto16_axis_logos_chronos
+onto16_axis_ethos_pathos
+
+onto16_mode_exploratory
+onto16_mode_executive
+onto16_mode_arbitral
+onto16_mode_stabilizing
+
+onto16_preference_structural
+onto16_preference_relational
+onto16_preference_temporal
+onto16_preference_normative
+
+onto16_feedback_direct
+onto16_feedback_delayed
+onto16_feedback_reflective
+onto16_feedback_null
+
+onto16_stance_proactive
+onto16_stance_reactive
+onto16_stance_abstaining
+onto16_stance_mediating
+
+onto16_boundary_open
+onto16_boundary_closed
+onto16_boundary_selective
+onto16_boundary_dynamic
+
+onto16_energy_cycle_diurnal
+onto16_energy_cycle_crepuscular
+onto16_energy_cycle_arrhythmic
+onto16_energy_cycle_contextual
+
+# Примечание: 
+# - Все термины используются ТОЛЬКО в связке с onto16-профилем
+# - Запрещено комбинировать с внешними психологическими шкалами (Big Five, DISC и др.)
+# - Не содержит оценочных суждений («лучше/хуже», «сильнее/слабее»)
+# - Служит для маршрутизации задач, распределения нагрузки и определения роли в экосистеме

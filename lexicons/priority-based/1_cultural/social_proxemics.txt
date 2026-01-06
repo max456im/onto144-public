@@ -1,0 +1,53 @@
+# social_proxemics.txt
+# Онтологический лексикон: социальная проксемика (уровень 1_cultural)
+# Лицензия: GPL-3.0-only
+# Семантический домен: нормы дистанции, иерархии, молчания и восстановления границ
+
+## Дистанционные режимы (пространственно-социальные границы)
+proxemic_boundary:neutral
+proxemic_boundary:intimate
+proxemic_boundary:personal
+proxemic_boundary:social
+proxemic_boundary:public
+
+## Сигналы иерархии (наблюдаемые/выполняемые маркеры статуса)
+hierarchy_signal:eye_contact_permitted
+hierarchy_signal:eye_contact_deferred
+hierarchy_signal:posture_adjustment_required
+hierarchy_signal:verbal_initiative_restricted
+hierarchy_signal:verbal_initiative_encouraged
+
+## Нормы молчания (социально предписанные формы тишины)
+silence_norm:obligatory_after_criticism
+silence_norm:permissible_during_reflection
+silence_norm:prohibited_in_emergency
+silence_norm:ritualized_in_consensus_formation
+silence_norm:expected_during_authority_speech
+
+## Формы обращения (лексические и ритуальные модальности)
+address_form:formal_title_only
+address_form:first_name_permitted
+address_form:kinship_metaphor_allowed
+address_form:honorific_compulsory
+address_form:role_based_designation
+
+## Нарушения проксемических границ (онтологически значимые инциденты)
+proxemic_violation:uninvited_approach
+proxemic_violation:unwarranted_familiarity
+proxemic_violation:disregard_of_spatial_rank
+proxemic_violation:excessive_duration_of_gaze
+proxemic_violation:interruption_of_ritual_silence
+
+## Механизмы восстановления (акты онтологического урегулирования)
+proxemic_restoration:request_for_distance
+proxemic_restoration:apologetic_posture
+proxemic_restoration:third_party_mediation
+proxemic_restoration:temporal_withdrawal
+proxemic_restoration:lexical_recalibration
+
+## Инварианты (непреодолимые принципы, применяемые в runtime)
+invariant:proxemic_context_overrides_verbal_content
+invariant:hierarchy_norms_apply_until_explicitly_suspended
+invariant:silence_is_a_social_act_not_an_absence
+invariant:spatial_arrangement_encodes_power_relations
+invariant:proxemic_compliance_signals_ontological_recognition

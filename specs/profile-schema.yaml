@@ -1,0 +1,126 @@
+```yaml
+# profile-schema.yaml
+# Схема валидации онтологического профиля для onto144
+# Лицензия: GPL-3.0-only
+
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://github.com/onto144-public/specs/profile-schema.yaml
+
+title: Onto144 Profile Schema
+description: Структура профиля синтетического разума в экосистеме onto144
+
+type: object
+properties:
+  profile_id:
+    type: string
+    pattern: '^[a-z0-9]+-[0-9]{4}$'
+    description: Уникальный идентификатор профиля (например: ugm-2026, med-ai-2026)
+    examples: ["ugm-2026", "sub_duo-2026"]
+
+  version:
+    type: string
+    pattern: '^\d+\.\d+\.\d+$'
+    description: Семантическая версия профиля
+    default: "1.0.0"
+
+  name:
+    type: string
+    minLength: 1
+    maxLength: 64
+    description: Человекочитаемое имя профиля
+    examples: ["UG-Mind", "Legal Ethics Core"]
+
+  description:
+    type: string
+    minLength: 10
+    maxLength: 512
+    description: Краткое описание назначения и границ профиля
+
+  license:
+    type: string
+    const: "GPL-3.0-only"
+    description: Все профили в onto144 строго под GPL-3.0-only
+
+  domain:
+    type: string
+    enum: [core, medical, legal, architecture, education, gaming, new_rights]
+    description: Домен, к которому принадлежит профиль
+
+  lexicon_ref:
+    type: string
+    pattern: '^([a-z_]+)\.txt$'
+    description: Имя файла лексикона, разрешённого для использования этим профилем
+    examples: ["medical.txt", "legal.txt", "gaming.txt"]
+
+  ethical_layer:
+    type: string
+    description: Идентификатор этического ядра (если применимо)
+    examples: ["lec-2026", "sub_duo-2026"]
+
+  ontology_version:
+    type: string
+    const: "144"
+    description: Версия онтологической базы (всегда "144" для этого репозитория)
+
+  capabilities:
+    type: object
+    properties:
+      can_generate:
+        type: boolean
+        description: Может ли профиль генерировать новые утверждения
+      can_interact:
+        type: boolean
+        description: Может ли профиль участвовать в диалоге или взаимодействии
+      can_self_revoke:
+        type: boolean
+        description: Может ли профиль инициировать самоотзыв при нарушении онтологических рамок
+    required: [can_generate, can_interact, can_self_revoke]
+
+  constraints:
+    type: object
+    properties:
+      prohibited_lexemes:
+        type: array
+        items:
+          type: string
+        description: Явный список запрещённых лексем (даже если они есть в лексиконе)
+      max_energy_state:
+        type: integer
+        minimum: 0
+        maximum: 144
+        description: Максимальное значение энергетического состояния (для onto16-совместимости)
+    required: []
+
+  metadata:
+    type: object
+    properties:
+      author:
+        type: string
+        description: Автор профиля (имя или юридическое лицо)
+      created_at:
+        type: string
+        format: date
+        description: Дата создания профиля (ГГГГ-ММ-ДД)
+      audited:
+        type: boolean
+        description: Прошёл ли профиль официальный аудит
+      audit_date:
+        type: string
+        format: date
+        description: Дата аудита (требуется, если audited = true)
+    required: [author, created_at, audited]
+
+required:
+  - profile_id
+  - version
+  - name
+  - description
+  - license
+  - domain
+  - lexicon_ref
+  - ontology_version
+  - capabilities
+  - metadata
+
+additionalProperties: false
+```

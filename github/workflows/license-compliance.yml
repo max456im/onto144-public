@@ -1,0 +1,61 @@
+name: License Compliance Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check_license_headers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check that all source files contain GPL notice
+        run: |
+          # Files that should contain a GPL header or reference
+          SOURCE_PATTERNS=(
+            "tools/*.py"
+            "profiles/**/*.yaml"
+            "specs/*.yaml"
+            "examples/*.py"
+            "tests/**/*.py"
+          )
+
+          missing_license=0
+          gpl_notice="GPL-3.0-only"
+
+          for pattern in "${SOURCE_PATTERNS[@]}"; do
+            for file in $(find . -path "./.git" -prune -o -name "$(basename "$pattern")" -path "$(dirname "$pattern")/*" 2>/dev/null); do
+              if [ -f "$file" ]; then
+                if ! grep -q -i "$gpl_notice" "$file" && ! grep -q -i "GNU General Public License" "$file"; then
+                  echo "⚠️ No GPL license notice in: $file"
+                  missing_license=1
+                fi
+              fi
+            done
+          done
+
+          # Also check that top-level LICENSE is GPL-3.0
+          if ! head -n 10 LICENSE | grep -q "GNU General Public License v3.0"; then
+            echo "❌ LICENSE file is not GPL-3.0"
+            exit 1
+          fi
+
+          if [ $missing_license -ne 0 ]; then
+            echo "❌ Some files are missing GPL compliance notice."
+            echo "All code and data files in this repository must clearly indicate GPL-3.0-only licensing."
+            exit 1
+          else
+            echo "✅ All relevant files comply with GPL-3.0-only license."
+          fi
+
+      - name: Verify repository-wide license metadata
+        run: |
+          # Check that README mentions GPL-3.0-only
+          if ! grep -q "GPL-3.0-only" README.md; then
+            echo "❌ README.md does not specify GPL-3.0-only"
+            exit 1
+          fi

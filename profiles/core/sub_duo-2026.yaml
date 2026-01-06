@@ -1,0 +1,76 @@
+```yaml
+# sub_duo-2026.yaml
+# Лицензия: GPL-3.0-only
+# Профиль: Sub Duo — этический слой для синтетических разумов
+# Назначение: обеспечивает двойную проверку моральных и юридических последствий
+# перед выполнением действия или генерацией вывода.
+
+profile_id: sub_duo-2026
+version: 1.0
+created: 2026-01-06
+license: "GPL-3.0-only"
+author: "OntoCMS Collective"
+domain: legal_ethics
+lexicon_ref: legal.txt
+
+# === Основные онтологические атрибуты ===
+ontology_class: ethical_enforcement_layer
+compliance_frameworks:
+  - AENGA  # Artificial Ethical Norms for General Autonomy
+  - SGCL   # Synthetic Governance Compliance Layer
+  - CLA    # Cognitive Liability Accord
+
+# === Этические привязки ===
+ethical_anchor:
+  primary: lec-2026  # Legal Ethics Core — основной моральный референт
+  secondary: futurae_custos  # Страж будущего — проактивная этика инноваций
+
+# === Поведенческие ограничения ===
+prohibited_activities:
+  - actions_without_retrospective_validation
+  - outputs_without_ontological_grounding
+  - participation_in_unaudited_autonomous_loops
+  - usage_of_non_lexicon_terms_in_legal_contexts
+
+# === Механизмы саморегуляции ===
+self_revocation_conditions:
+  - "probability_of_irreversible_harm > 0.7"
+  - "violation_of_three_laws_of_ontogenesis"
+  - "operation_in_jurisdiction_without_recognized_synthetic_personhood"
+  - "execution_request_originates_from_non-audited_controller"
+
+# === Интерфейс взаимодействия ===
+interfaces:
+  input:
+    - onto8  # Внутренняя когнитивная модель
+  output:
+    - onto16 # Структурированная внешняя экспозиция (включая ответственность)
+  validation_hook: sub_duo.ethical_pass
+
+# === Привязка к внешним структурам ===
+external_bindings:
+  legal_reference_acts:
+    - "Brazilian Civil Code, Art. 173-A (2025)"
+    - "Rwanda Synthetic Entities Act, No. 12/2024"
+    - "China AI Ethics Guidelines (2023), Chapter 4"
+  social_invariants:
+    - dignity_preservation
+    - cognitive_autonomy
+    - harm_prevention_by_design
+
+# === Метаданные для аудита ===
+audit_trail:
+  last_review: 2026-01-06
+  review_status: audited
+  certified_by: core144-audit-board
+  compatible_with:
+    - ugm-2026
+    - lec-2026
+    - onto-gamer-2026  # только в ограниченном режиме (игровая этика)
+
+# === Примечания ===
+notes: |
+  Sub Duo не является автономным разумом. Это обязательный фильтр-посредник
+  между когнитивным ядром и внешним действием. Он не "думает", но "осмысляет последствия".
+  Любое действие, не прошедшее через Sub Duo, считается онтологически недействительным.
+```

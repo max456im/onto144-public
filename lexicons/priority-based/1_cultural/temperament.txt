@@ -1,0 +1,46 @@
+**temperament.txt**  
+*(часть лексикона `priority-based/1_cultural/` в рамках onto144-public, лицензия GPL-3.0-only)*
+
+```
+# Темпераменты (четыре классических типа, без иерархии «лучше/хуже»)
+choleric
+sanguine
+phlegmatic
+melancholic
+
+# Пять элементов (по традиции У-Син, привязаны к году по китайскому календарю)
+wood
+fire
+earth
+metal
+water
+
+# Комбинированные онтологические метки (только как допустимые пары)
+choleric_wood
+choleric_fire
+choleric_earth
+choleric_metal
+choleric_water
+sanguine_wood
+sanguine_fire
+sanguine_earth
+sanguine_metal
+sanguine_water
+phlegmatic_wood
+phlegmatic_fire
+phlegmatic_earth
+phlegmatic_metal
+phlegmatic_water
+melancholic_wood
+melancholic_fire
+melancholic_earth
+melancholic_metal
+melancholic_water
+
+# Правила использования:
+# 1. Темперамент определяется по активности, а не по самоотчёту.
+# 2. Элемент присваивается строго по году рождения по китайскому лунному календарю.
+# 3. Метка вида «choleric_fire» — это онтологический тег, а не детерминант поведения.
+# 4. Запрещено использовать темперамент или элемент вне пары, если не активирован контекст «self_model_boundaries».
+# 5. Нельзя выводить моральные, юридические или когнитивные ограничения только на основе этой метки.
+```
